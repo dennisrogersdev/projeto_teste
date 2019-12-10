@@ -29,8 +29,7 @@ class Produto extends Model {
 
     //Salvar
 	public function salvar() {
-
-		$query = "insert into produto(descricao, estoque, preco) values (:descricao, :estoque, :preco)";
+		$query = "insert into produto (descricao, estoque, preco) values (:descricao, :estoque, :preco)";
 		$stmt = $this->db->prepare($query);
 		$stmt->bindValue(':descricao', $this->__get('descricao'));
 		$stmt->bindValue(':estoque', $this->__get('estoque'));
